@@ -4,8 +4,7 @@
 
 -- | <http://www.opengroup.org/onlinepubs/9699919799/basedefs/regex.h.html>
 
-module Bindings.Harfbuzz where
-#strict_import
+module Bindings.Harfbuzz () where
 import Graphics.Rendering.FreeType.Internal.Face
 
 #opaque_t hb_buffer_t
@@ -40,8 +39,9 @@ import Graphics.Rendering.FreeType.Internal.Face
 #integral_t hb_direction_t
 #num HB_DIRECTION_LTR
 
-#integral_t hb_script_t
-#num HB_SCRIPT_COMMON
+#enum hb_script_t C'hb_script_t HB_SCRIPT_COMMON
+-- #integral_t hb_script_t
+-- #num HB_SCRIPT_COMMON
 
 -- #opaque_t FT_FaceRec_
 -- #synonym_t FT_Face, Ptr <FT_FaceRec_>

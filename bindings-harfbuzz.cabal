@@ -49,7 +49,17 @@ cabal-version:       >=1.10
 library
   -- Modules exported by the library.
   exposed-modules:     
-    Bindings.Harfbuzz
+    Bindings.Harfbuzz.Hb
+    Bindings.Harfbuzz.HbBlob
+    Bindings.Harfbuzz.HbBuffer
+    Bindings.Harfbuzz.HbCommon
+    Bindings.Harfbuzz.HbFace
+    Bindings.Harfbuzz.HbFont
+    Bindings.Harfbuzz.HbFt
+    Bindings.Harfbuzz.HbSet
+    Bindings.Harfbuzz.HbShape
+    Bindings.Harfbuzz.HbUnicode
+    Bindings.Harfbuzz.HbVersion
   
   -- Modules included in this library but not exported.
   -- other-modules:       
@@ -61,8 +71,8 @@ library
     ForeignFunctionInterface
   
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.6 && <4.7,
-    bindings-DSL >= 1.0.16 && < 1.1,
+  build-depends:       base,
+    bindings-DSL,
     freetype2
   
   -- Directories containing source files.
